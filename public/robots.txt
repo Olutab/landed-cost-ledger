@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://landedship.netlify.app/sitemap.xml

@@ -175,3 +175,29 @@ for (const row of matrixData) {
 }
 
 console.log(`\n✨ Generated ${count} rich scenario pages in public/scenarios/`);
+// --- SEO HARDENING: Sitemap & Robots ---
+const SITE_URL = 'https://landedship.netlify.app'; 
+
+// 1. Generate robots.txt
+const robotsTxt = `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`;
+writeFileSync(join(__dirname, '../public/robots.txt'), robotsTxt);
+
+// 2. Generate sitemap.xml
+const corePages = ['', 'about', 'method', 'faq', 'privacy', 'contact'];
+let sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
+
+corePages.forEach(page => {
+    const loc = page === '' ? SITE_URL : `${SITE_URL}/${page}`;
+    sitemapXml += `  <url><loc>${loc}</loc></url>\n`;
+});
+
+matrixData.forEach(row => {
+    if (row.auditing_status !== 'UNVERIFIED-DRAFT') {
+        sitemapXml += `  <url><loc>${SITE_URL}/scenarios/${row.slug}/</loc></url>\n`;
+    }
+});
+
+sitemapXml += `</urlset>`;
+writeFileSync(join(__dirname, '../public/sitemap.xml'), sitemapXml);
+
+console.log(`\n🗺️  Generated robots.txt and sitemap.xml for ${SITE_URL}`);
