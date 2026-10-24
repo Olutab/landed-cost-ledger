@@ -224,10 +224,7 @@ p { margin: 0 0 0.75rem; }
           <span class="brand">Landed Cost Ledger</span>
         </a>
         <nav class="nav-links">
-          <a href="/">Calculator</a>
-          <a href="/method">Method</a>
-          <a href="/about">About</a>
-          <a href="/faq">FAQ</a>
+          <a href="/">Calculator</a><a href="/method">Method</a><a href="/about">About</a><a href="/faq">FAQ</a>
         </nav>
         <span class="asof">Data as of 21 Oct 2026</span>
       </div>
@@ -239,28 +236,31 @@ p { margin: 0 0 0.75rem; }
         <h1>China to US Air Freight, $10,001+, Electronics (HTS 8544)</h1>
         <p class="lede">Formal air entry for high-value cables triggers max MPF and standard HMF; Section 301 duties apply heavily to Chinese origin copper and wire products.</p>
         
-        <div class="worksheet" style="margin-top: 2rem;">
-           <div class="worksheet-left">
-             <h3 class="panel-title">Scenario Parameters</h3>
-             <div class="line"><span>Origin</span><strong>China</strong></div>
-             <div class="line"><span>Mode</span><strong>air</strong></div>
-             <div class="line"><span>Value Band</span><strong>10001-plus</strong></div>
-             <div class="line"><span>Category</span><strong>HTS 8544 insulated wire and cables</strong></div>
-             <div class="line"><span>Fee Profile</span><strong>AIR</strong></div>
-           </div>
-           <div class="worksheet-right">
-             <h3 class="panel-title">Compliance & Audit</h3>
-             <div class="line"><span>Entry Path</span><strong>formal_entry_likely</strong></div>
-             <div class="line"><span>Section 301</span><strong>likely</strong></div>
-             <div class="line"><span>Risk Tier</span><strong>HIGH</strong></div>
-             <div class="line"><span>Audit Status</span><strong>SOURCED</strong></div>
-             <p style="margin-top: 1rem; font-size: 0.9rem;"><a href="https://www.cbp.gov/trade/programs-administration/entry-process/fees" target="_blank" rel="noopener noreferrer">View official source (CBP)</a></p>
-           </div>
+        <h2>Entry Path & Compliance Analysis</h2>
+        <p>Because this shipment exceeds the $2,500 informal threshold, it requires a formal customs entry. This mandates the use of a licensed customs broker and a continuous or single-entry customs bond. The broker will file the CBP Form 7501 (Entry Summary) and is legally responsible for classifying the HTS 8544 insulated wire and cables correctly under the Harmonized Tariff Schedule.</p><p><strong>Tariff Exposure:</strong> This scenario carries a high likelihood of Section 301 punitive tariffs (often an additional 25% ad valorem for Chinese origin goods in this category). These duties are assessed on top of the standard Most Favored Nation (MFN) duty rate. Importers should verify if any active USTR exclusions apply to their specific 10-digit HTS subheading before finalizing the purchase order.</p>
+
+                <h2>Worked Example: Cost Stack</h2>
+        <p>Below is an estimated cost stack for a hypothetical <strong>25,000.00</strong> shipment of HTS 8544 insulated wire and cables via air from China.</p>
+        <div class="worksheet" style="margin-top: 1.5rem;">
+          <div class="worksheet-right" style="grid-column: 1 / -1;">
+            <div class="line"><span>Declared Goods Value</span><strong>25,000.00</strong></div>
+            <div class="line"><span>Est. Duty & Section 301 (5%)</span><strong>1,250.00</strong></div>
+            <div class="line"><span>Merchandise Processing Fee (MPF)</span><strong>86.60</strong></div>
+            <div class="line"><span>Harbor Maintenance Fee (HMF)</span><strong>0.00</strong></div>
+            <div class="total"><span>Estimated Landed Cost</span><strong>26,336.60</strong></div>
+          </div>
         </div>
+        <p class="limits" style="margin-top: 1rem;">Note: This example excludes freight, insurance, and broker clearance fees. See <a href="/method">Method & Expert Advice</a> for calculation limits.</p>
+
+        <h2>Compare Similar Scenarios</h2>
+        <p>Small changes in value or mode can drastically alter the entry type and fee structure. Compare this route to:</p>
+        <ul style="font-size: 1.05rem; line-height: 1.8; color: var(--ink-soft);">
+          <li><a href="/scenarios/china-air-2501-10000-electronics-hts-8544/">China air $2.5k-$10k electronics</a></li><li><a href="/scenarios/china-ocean-fcl-10001-plus-electronics-hts-8544/">China FCL >$10k electronics</a></li>
+        </ul>
 
         <div style="margin-top: 3rem; text-align: center; padding: 2rem; background: var(--tint); border-radius: 14px;">
-          <h3 style="margin-bottom: 0.5rem;">Calculate exact dollar amounts</h3>
-          <p style="color: var(--ink-soft); margin-bottom: 1.5rem;">Use our interactive tool to estimate MPF, HMF, and total landed cost for this exact scenario.</p>
+          <h3 style="margin-bottom: 0.5rem;">Calculate your exact shipment</h3>
+          <p style="color: var(--ink-soft); margin-bottom: 1.5rem;">Use our interactive tool to model different values for this exact route.</p>
           <a href="/" style="display: inline-block; background: var(--accent); color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 6px rgba(29,78,216,0.2);">Open the Calculator</a>
         </div>
       </section>
@@ -269,11 +269,7 @@ p { margin: 0 0 0.75rem; }
     <footer class="footer">
       <div class="wrap">
         <nav class="footer-nav">
-          <a href="/about">About Us</a>
-          <a href="/method">Method & Expert Advice</a>
-          <a href="/faq">FAQ</a>
-          <a href="/privacy">Privacy Policy</a>
-          <a href="/contact">Contact</a>
+          <a href="/about">About Us</a><a href="/method">Method & Expert Advice</a><a href="/faq">FAQ</a><a href="/privacy">Privacy Policy</a><a href="/contact">Contact</a>
         </nav>
         <p class="footer-small">© 2026 Landed Cost Ledger · Static, client-side tool · No cookies, no tracking, no uploads.</p>
       </div>

@@ -224,10 +224,7 @@ p { margin: 0 0 0.75rem; }
           <span class="brand">Landed Cost Ledger</span>
         </a>
         <nav class="nav-links">
-          <a href="/">Calculator</a>
-          <a href="/method">Method</a>
-          <a href="/about">About</a>
-          <a href="/faq">FAQ</a>
+          <a href="/">Calculator</a><a href="/method">Method</a><a href="/about">About</a><a href="/faq">FAQ</a>
         </nav>
         <span class="asof">Data as of 21 Oct 2026</span>
       </div>
@@ -239,28 +236,31 @@ p { margin: 0 0 0.75rem; }
         <h1>China to US Courier Shipment, $801–$2,500, Electronics (HTS 8544)</h1>
         <p class="lede">Courier shipments in the $801 to $2,500 band require informal entry clearance; express carriers typically handle the brokerage but pass MPF and duty costs to the importer.</p>
         
-        <div class="worksheet" style="margin-top: 2rem;">
-           <div class="worksheet-left">
-             <h3 class="panel-title">Scenario Parameters</h3>
-             <div class="line"><span>Origin</span><strong>China</strong></div>
-             <div class="line"><span>Mode</span><strong>courier</strong></div>
-             <div class="line"><span>Value Band</span><strong>801-2500</strong></div>
-             <div class="line"><span>Category</span><strong>HTS 8544 insulated wire and cables</strong></div>
-             <div class="line"><span>Fee Profile</span><strong>EXPRESS</strong></div>
-           </div>
-           <div class="worksheet-right">
-             <h3 class="panel-title">Compliance & Audit</h3>
-             <div class="line"><span>Entry Path</span><strong>informal_entry_candidate</strong></div>
-             <div class="line"><span>Section 301</span><strong>possible</strong></div>
-             <div class="line"><span>Risk Tier</span><strong>HIGH</strong></div>
-             <div class="line"><span>Audit Status</span><strong>SOURCED</strong></div>
-             <p style="margin-top: 1rem; font-size: 0.9rem;"><a href="https://www.cbp.gov/trade/basic-import-export/internet-purchases" target="_blank" rel="noopener noreferrer">View official source (CBP)</a></p>
-           </div>
+        <h2>Entry Path & Compliance Analysis</h2>
+        <p>Shipments in the $801 to $2,500 band require informal entry clearance. Your courier carrier or a licensed broker will typically file a simplified entry on your behalf. While faster than formal entry, CBP still assesses standard Merchandise Processing Fees (MPF) and collects all applicable duties before release.</p><p><strong>Compliance Risk:</strong> This route is flagged as high risk due to the combination of value, mode, and product category. CBP frequently targets these shipments for intensive exams (VACIS or MET) to verify country of origin, forced labor compliance (UFLPA), and accurate valuation. Expect potential delays of 5–14 days at the port of entry and additional exam fees passed through by your broker.</p>
+
+                <h2>Worked Example: Cost Stack</h2>
+        <p>Below is an estimated cost stack for a hypothetical <strong>1,500.00</strong> shipment of HTS 8544 insulated wire and cables via courier from China.</p>
+        <div class="worksheet" style="margin-top: 1.5rem;">
+          <div class="worksheet-right" style="grid-column: 1 / -1;">
+            <div class="line"><span>Declared Goods Value</span><strong>1,500.00</strong></div>
+            <div class="line"><span>Est. Duty & Section 301 (5%)</span><strong>75.00</strong></div>
+            <div class="line"><span>Merchandise Processing Fee (MPF)</span><strong>5.00</strong></div>
+            <div class="line"><span>Harbor Maintenance Fee (HMF)</span><strong>0.00</strong></div>
+            <div class="total"><span>Estimated Landed Cost</span><strong>1,580.00</strong></div>
+          </div>
         </div>
+        <p class="limits" style="margin-top: 1rem;">Note: This example excludes freight, insurance, and broker clearance fees. See <a href="/method">Method & Expert Advice</a> for calculation limits.</p>
+
+        <h2>Compare Similar Scenarios</h2>
+        <p>Small changes in value or mode can drastically alter the entry type and fee structure. Compare this route to:</p>
+        <ul style="font-size: 1.05rem; line-height: 1.8; color: var(--ink-soft);">
+          <li><a href="/scenarios/china-postal-801-2500-electronics-hts-8544/">China postal $801-$2.5k electronics</a></li><li><a href="/scenarios/china-courier-0-800-electronics-hts-8544/">China courier <$800 electronics</a></li>
+        </ul>
 
         <div style="margin-top: 3rem; text-align: center; padding: 2rem; background: var(--tint); border-radius: 14px;">
-          <h3 style="margin-bottom: 0.5rem;">Calculate exact dollar amounts</h3>
-          <p style="color: var(--ink-soft); margin-bottom: 1.5rem;">Use our interactive tool to estimate MPF, HMF, and total landed cost for this exact scenario.</p>
+          <h3 style="margin-bottom: 0.5rem;">Calculate your exact shipment</h3>
+          <p style="color: var(--ink-soft); margin-bottom: 1.5rem;">Use our interactive tool to model different values for this exact route.</p>
           <a href="/" style="display: inline-block; background: var(--accent); color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 6px rgba(29,78,216,0.2);">Open the Calculator</a>
         </div>
       </section>
@@ -269,11 +269,7 @@ p { margin: 0 0 0.75rem; }
     <footer class="footer">
       <div class="wrap">
         <nav class="footer-nav">
-          <a href="/about">About Us</a>
-          <a href="/method">Method & Expert Advice</a>
-          <a href="/faq">FAQ</a>
-          <a href="/privacy">Privacy Policy</a>
-          <a href="/contact">Contact</a>
+          <a href="/about">About Us</a><a href="/method">Method & Expert Advice</a><a href="/faq">FAQ</a><a href="/privacy">Privacy Policy</a><a href="/contact">Contact</a>
         </nav>
         <p class="footer-small">© 2026 Landed Cost Ledger · Static, client-side tool · No cookies, no tracking, no uploads.</p>
       </div>
