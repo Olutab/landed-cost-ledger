@@ -1,0 +1,95 @@
+{
+  "site_name": "Landed Cost Ledger",
+  "site_purpose": "Help small importers and e-commerce sellers estimate true US landed cost, including freight, insurance, duty, MPF, HMF, Section 301 exposure, and entry-type treatment.",
+  "layout_archetype": "Calculator-first single-purpose tool",
+  "layout_archetype_reason": "The primary searcher intent is to calculate a compliant cost outcome, not to read generic logistics content.",
+  "navigation_model": "Top bar",
+  "navigation_model_reason": "Importers need fast access to calculator, scenarios, mode hubs, and glossary without a complex app shell.",
+  "visual_language": "Blueprint/technical drawing",
+  "visual_language_reason": "Tariff, entry and fee logic should feel engineered, auditable, and document-like rather than promotional.",
+  "type_pairing": {
+    "display": "Chakra Petch",
+    "text": "IBM Plex Sans",
+    "reason": "Chakra Petch gives a technical, logistics-system feel; IBM Plex Sans keeps dense fee explanations readable."
+  },
+  "palette": {
+    "bg": "#F7F9FC",
+    "surface": "#FFFFFF",
+    "ink": "#101828",
+    "accent": "#1D4ED8",
+    "warning": "#B42318"
+  },
+  "palette_contrast_checks": [
+    {
+      "combination": "ink on bg",
+      "ratio": "15.8:1"
+    },
+    {
+      "combination": "ink on surface",
+      "ratio": "17.1:1"
+    },
+    {
+      "combination": "accent on surface",
+      "ratio": "6.7:1"
+    },
+    {
+      "combination": "accent on bg",
+      "ratio": "6.4:1"
+    },
+    {
+      "combination": "warning on surface",
+      "ratio": "6.5:1"
+    }
+  ],
+  "motion_level": "subtle",
+  "motion_reason": "Calculators and compliance tables need trust; motion should only clarify state changes.",
+  "imagery_strategy": {
+    "photo_style": "documentary logistics",
+    "subjects": [
+      "postal parcels in trays",
+      "courier sorting facilities",
+      "air cargo pallets",
+      "ocean containers at port",
+      "warehouse label scanning",
+      "customs paperwork close-ups"
+    ],
+    "treatment": "light blue duotone overlay with thin technical frame",
+    "rules": [
+      "no identifiable people",
+      "no trademarked carrier logos unless the page is specifically about that carrier and sourced",
+      "no fake customs documents",
+      "no photos implying guaranteed clearance",
+      "no before/after savings claims"
+    ]
+  },
+  "voice": {
+    "adjectives": [
+      "plain",
+      "precise",
+      "compliance-aware"
+    ],
+    "banned_phrases": [
+      "guaranteed clearance",
+      "risk-free import",
+      "tariff loophole"
+    ]
+  },
+  "page_type_mix": [
+    "scenario entity page",
+    "mode hub",
+    "origin hub",
+    "HTS category hub",
+    "comparison page",
+    "glossary page",
+    "calculator landing page",
+    "best-for use-case page"
+  ],
+  "ymyl_guardrails": {
+    "visible_as_of_date": true,
+    "method_note_required": true,
+    "limits_note_required": true,
+    "no_absolute_legal_advice": true,
+    "estimated_label_required_when_no_source": true,
+    "unverified_draft_pages_noindex_and_reported": true
+  }
+}
