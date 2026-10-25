@@ -87,6 +87,12 @@ export default function Home() {
         <div className="card"><h3>Private by design</h3><p>Zero backend, zero login. The math runs entirely in your browser; nothing you type into the calculator leaves your device.</p></div>
         <div className="card"><h3>Rules dated, not assumed</h3><p>Threshold logic follows the current publication status of CBP and Federal Register rules. Where a rule could not be tied to a document, the result says so.</p></div>
       </section>
+
+      <section className="wrap" style={{ paddingBottom: '3rem', textAlign: 'center' }}>
+        <a href="/scenarios/" style={{ color: 'var(--accent)', fontWeight: 600, textDecoration: 'none' }}>
+          Browse all 40 audited import scenarios →
+        </a>
+      </section>
     </Layout>
   );
 }

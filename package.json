@@ -5,15 +5,18 @@
   "type": "module",
     "scripts": {
     "dev": "vite",
+    "images": "node scripts/fetch-images.mjs",
     "prebuild": "node scripts/build-scenarios.mjs",
     "build": "tsc -b && vite build",
+    "postbuild": "node scripts/verify-images.mjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
-    "react-router-dom": "^7.18.4"
+    "react-router-dom": "^7.18.4",
+    "sharp": "^0.35.5"
   },
   "devDependencies": {
     "@types/node": "^24.19.2",

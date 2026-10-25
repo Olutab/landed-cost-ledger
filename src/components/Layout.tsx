@@ -20,6 +20,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </Link>
           <nav className="nav-links">
             <Link to="/">Calculator</Link>
+            <a href="/scenarios/">Scenarios</a>
             <Link to="/method">Method</Link>
             <Link to="/about">About</Link>
             <Link to="/faq">FAQ</Link>
