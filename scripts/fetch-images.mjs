@@ -47,6 +47,12 @@ function evaluate(page) {
   if (!info.width || info.width < MIN_WIDTH) return { ok: false, reason: 'width ' + info.width + ' < ' + MIN_WIDTH };
   if (info.height && info.height > info.width) return { ok: false, reason: 'portrait ' + info.width + 'x' + info.height };
   const meta = info.extmetadata || {};
+    // Deprioritize military/government photos unless no alternative
+  const title = page.title || '';
+  const isMilitary = /(military|army|navy|air force|marine|soldier|troop|combat|deployment)/i.test(title);
+  if (isMilitary && pool.length >= 2) {
+    return { ok: false, reason: 'military photo (skipping in favor of commercial)' };
+  }
   const lv = licenseVerdict(meta.LicenseShortName?.value || '');
   if (!lv.ok) return { ok: false, reason: 'license: ' + lv.reason };
   return { ok: true, reason: lv.reason, info, meta };

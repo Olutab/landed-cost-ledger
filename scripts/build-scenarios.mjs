@@ -37,7 +37,7 @@ function figureHtml(row, img, { hero = false } = {}) {
        alt="${escapeAttr(img.alt)}"
        ${hero ? 'fetchpriority="high"' : 'loading="lazy"'}
        style="width:100%;height:auto;border-radius:14px;box-shadow:var(--shadow-md);" />
-  <figcaption style="font-size:0.8rem;color:var(--ink-soft);margin-top:0.5rem;text-align:center;">Photo: ${escapeAttr(img.artist)} / ${escapeAttr(img.source)} (${credit})</figcaption>
+    <figcaption style="font-size:0.75rem;color:#94a3b8;margin-top:0.5rem;text-align:center;">Photo: ${escapeAttr(img.artist)}${img.license.includes('public-domain') ? '' : ` / ${escapeAttr(img.license)}`}</figcaption>
 </figure>`;
 }
 const manifestPath = join(__dirname, '../images.manifest.json');
