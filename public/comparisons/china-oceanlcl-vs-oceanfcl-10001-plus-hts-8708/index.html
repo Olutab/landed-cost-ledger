@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>China AIR vs OCEAN LCL for HTS 8544 (2501-10000) | Landed Cost Ledger</title>
-    <meta name="description" content="Side-by-side comparison of AIR vs OCEAN LCL for importing HTS 8544 from China in the 2501-10000 value band. See differences in MPF, HMF, entry path, and risk." />
+    <title>OCEAN LCL vs OCEAN FCL for HTS 8708 from China (10001-plus) | Landed Cost Ledger</title>
+    <meta name="description" content="Compare OCEAN LCL vs OCEAN FCL for importing HTS 8708 from China. See differences in MPF ($86.60 vs $86.60), HMF, entry path, and Section 301 exposure." />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -223,38 +223,47 @@ p { margin: 0 0 0.75rem; }
           <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="1" width="22" height="22" rx="6" fill="#1D4ED8"/><path d="M6 9h12M6 13h12M6 17h8" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round"/></svg>
           <span class="brand">Landed Cost Ledger</span>
         </a>
-        <nav class="nav-links"><a href="/">Calculator</a><a href="/scenarios/">Scenarios</a><a href="/method">Method</a></nav>
+        <nav class="nav-links"><a href="/">Calculator</a><a href="/scenarios/">Scenarios</a><a href="/research">Research</a></nav>
       </div>
     </header>
     <main>
       <section class="wrap page-content">
-        <span class="overline">Comparison</span>
-        <h1>China: AIR vs OCEAN LCL</h1>
-        <p class="lede">Comparing shipping modes for <strong>HTS 8544</strong> shipments in the <strong>2501-10000</strong> value band. While the goods and origin are identical, the entry path, fee structure, and risk profile change drastically between these two modes.</p>
+        <span class="overline">Mode Comparison</span>
+        <h1>China: OCEAN LCL vs OCEAN FCL</h1>
+        <p class="lede">Side-by-side analysis of two shipping modes for <strong>HTS 8708</strong> shipments in the <strong>10001 to $plus</strong> value band. For a $25,000 shipment, the fee structures diverge significantly.</p>
         
         <div class="worksheet" style="margin-top: 2rem; grid-template-columns: 1fr 1fr;">
-          <div class="worksheet-left" style="border-right: 1px solid var(--line);">
-            <h3 class="panel-title">AIR</h3>
+          <div style="border-right: 1px solid var(--line); padding-right: 1.5rem;">
+            <h3 style="color: var(--accent);">OCEAN LCL</h3>
             <div class="line"><span>Entry Path</span><strong>formal_entry_likely</strong></div>
-            <div class="line"><span>Fee Profile</span><strong>AIR</strong></div>
+            <div class="line"><span>MPF (est.)</span><strong>$86.60</strong></div>
+            <div class="line"><span>HMF</span><strong>$31.25</strong></div>
             <div class="line"><span>Section 301</span><strong>likely</strong></div>
             <div class="line"><span>Risk Tier</span><strong>HIGH</strong></div>
-            <div class="line"><span>Audit Status</span><strong>ESTIMATED</strong></div>
-            <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--ink-soft);">Estimate: Section 301 exposure is marked likely based on general Chapter 85 trade actions; exact subheading duty rate and exclusion status requires HTSUS lookup at time of entry.</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--ink-soft);">Auto parts from China face Section 301 tariffs; LCL consolidation increases the risk of co-shipper holds, where one flagged pallet delays the entire container's release.</p>
+            <a href="/scenarios/china-ocean-lcl-10001-plus-autoparts-hts-8708/" style="display: inline-block; margin-top: 1rem; color: var(--accent); font-weight: 600;">View full scenario →</a>
           </div>
-          <div class="worksheet-right">
-            <h3 class="panel-title">OCEAN LCL</h3>
+          <div>
+            <h3 style="color: var(--accent);">OCEAN FCL</h3>
             <div class="line"><span>Entry Path</span><strong>formal_entry_likely</strong></div>
-            <div class="line"><span>Fee Profile</span><strong>OCEAN_LCL</strong></div>
+            <div class="line"><span>MPF (est.)</span><strong>$86.60</strong></div>
+            <div class="line"><span>HMF</span><strong>$31.25</strong></div>
             <div class="line"><span>Section 301</span><strong>likely</strong></div>
             <div class="line"><span>Risk Tier</span><strong>HIGH</strong></div>
-            <div class="line"><span>Audit Status</span><strong>ESTIMATED</strong></div>
-            <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--ink-soft);">Estimate: LCL electronics face standard MPF/HMF plus likely Section 301; terminal fees and broker advancement costs for LCL can disproportionately impact mid-value shipments.</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--ink-soft);">FCL auto parts imports require DOT/EPA compliance verification alongside Section 301 duty payment; continuous bonds are mandatory for these high-volume formal entries.</p>
+            <a href="/scenarios/china-ocean-fcl-10001-plus-autoparts-hts-8708/" style="display: inline-block; margin-top: 1rem; color: var(--accent); font-weight: 600;">View full scenario →</a>
           </div>
         </div>
 
-        <div style="margin-top: 3rem; text-align: center;">
-          <a href="/" style="display: inline-block; background: var(--accent); color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600;">Calculate Exact Costs</a>
+        <div style="margin-top: 2rem; padding: 1.5rem; background: var(--tint); border-radius: 14px; border-left: 4px solid var(--accent);">
+          <h3 style="margin-top: 0;">Key Difference</h3>
+          <p style="margin-bottom: 0;">
+            Both modes have different fee profiles: OCEAN_LCL vs OCEAN_FCL. The entry path difference (formal_entry_likely vs formal_entry_likely) is the primary compliance consideration.
+          </p>
+        </div>
+
+        <div style="margin-top: 2rem; text-align: center;">
+          <a href="/" style="display: inline-block; background: var(--accent); color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600;">Calculate Your Exact Shipment</a>
         </div>
       </section>
     </main>
