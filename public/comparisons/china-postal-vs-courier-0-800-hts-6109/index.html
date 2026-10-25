@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>China POSTAL vs COURIER for HTS 6109 (0-800) | Landed Cost Ledger</title>
+    <meta name="description" content="Side-by-side comparison of POSTAL vs COURIER for importing HTS 6109 from China in the 0-800 value band. See differences in MPF, HMF, entry path, and risk." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>:root {
+  --bg: #FAFBFC;
+  --surface: #FFFFFF;
+  --ink: #0F172A;
+  --ink-soft: #5A6478;
+  --line: #E4E9F0;
+  --tint: #F4F6F9;
+  --accent: #1D4ED8;
+  --ok-text: #166534;
+  --ok-bg: #F3FAF5;
+  --ok-line: #CBE6D2;
+  --warn-text: #991B1B;
+  --warn-bg: #FDF5F4;
+  --warn-line: #F0D2CE;
+  --r-lg: 14px;
+  --r-sm: 8px;
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05), 0 1px 3px rgba(15, 23, 42, 0.07);
+  --shadow-md: 0 6px 20px rgba(15, 23, 42, 0.07);
+
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+
+h1, h2, h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0 0 0.75rem;
+}
+h1 { font-size: clamp(2.3rem, 5vw, 3.4rem); letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.35rem, 2.4vw, 1.75rem); letter-spacing: -0.01em; }
+h3 { font-size: 1rem; }
+p { margin: 0 0 0.75rem; }
+
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.wrap { max-width: 1080px; margin: 0 auto; padding-left: 1.25rem; padding-right: 1.25rem; }
+
+.overline {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+/* Top bar */
+.topbar { background: var(--surface); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 10; }
+.topbar-inner { display: flex; align-items: center; gap: 0.6rem; height: 60px; }
+.brand { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 1.02rem; letter-spacing: -0.01em; }
+.asof {
+  margin-left: auto;
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  background: var(--tint);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.28rem 0.7rem;
+  white-space: nowrap;
+}
+
+/* Hero */
+.hero { max-width: 780px; margin: 0 auto; text-align: center; padding: 4.5rem 1.25rem 3rem; }
+.lede { font-size: 1.12rem; color: var(--ink-soft); margin: 1rem auto 0; max-width: 60ch; }
+.chips { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-top: 1.5rem; }
+.chip {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Calculator */
+.tool { padding-bottom: 3.5rem; }
+.tool h2 { margin-bottom: 1.25rem; }
+.worksheet {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+.worksheet-left { padding: 1.75rem; background: #FBFCFE; border-right: 1px solid var(--line); }
+.worksheet-right { padding: 1.75rem; }
+.panel-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 1.1rem;
+}
+.field { margin-bottom: 1rem; }
+.field label { display: block; font-size: 0.85rem; font-weight: 500; margin-bottom: 0.35rem; }
+.field select, .field input {
+  width: 100%;
+  padding: 0.6rem 0.7rem;
+  border: 1px solid #D6DDE7;
+  border-radius: var(--r-sm);
+  background: #FFFFFF;
+  font: inherit;
+  color: var(--ink);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.field select:focus, .field input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.14);
+}
+
+.line { display: flex; justify-content: space-between; gap: 1rem; padding: 0.6rem 0; border-bottom: 1px solid var(--line); font-size: 0.95rem; }
+.line span { color: var(--ink-soft); }
+.line strong { font-weight: 600; font-variant-numeric: tabular-nums; }
+.total { display: flex; justify-content: space-between; align-items: baseline; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+.total span { font-weight: 600; }
+.total strong {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+}
+
+.verdict {
+  margin-top: 1.1rem;
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  background: var(--ok-bg);
+  border: 1px solid var(--ok-line);
+  color: var(--ok-text);
+}
+.verdict.warn { background: var(--warn-bg); border-color: var(--warn-line); color: var(--warn-text); }
+.matched { margin-top: 0.9rem; font-size: 0.85rem; color: var(--ink-soft); }
+.limits { font-size: 0.8rem; color: var(--ink-soft); margin-bottom: 0; }
+
+/* Trust + method */
+.trust { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; padding-bottom: 3.5rem; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 1.4rem; box-shadow: var(--shadow-sm); }
+.card h3 { margin-bottom: 0.4rem; }
+.card p { font-size: 0.9rem; color: var(--ink-soft); margin: 0; }
+
+.how { padding-bottom: 4.5rem; }
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.step { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 1.4rem; box-shadow: var(--shadow-sm); }
+.step .num {
+  display: inline-block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: rgba(29, 78, 216, 0.08);
+  border-radius: 999px;
+  padding: 0.15rem 0.6rem;
+  margin-bottom: 0.7rem;
+}
+.step h3 { margin-bottom: 0.35rem; }
+.step p { font-size: 0.9rem; color: var(--ink-soft); margin: 0; }
+
+/* Footer */
+.footer { background: var(--ink); color: #9AA6B8; padding: 3rem 0; font-size: 0.88rem; margin-top: 1rem; }
+.footer strong { color: #E6EBF2; }
+.footer-small { font-size: 0.78rem; color: #7C8798; margin: 1rem 0 0; }
+
+@media (max-width: 900px) {
+  .hero { padding: 3rem 1.25rem 2.25rem; }
+  .worksheet { grid-template-columns: 1fr; }
+  .worksheet-left { border-right: none; border-bottom: 1px solid var(--line); }
+  .trust, .steps { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
+/* Navigation & Footer Links */
+.nav-links { display: flex; gap: 1.5rem; margin-left: auto; }
+.nav-links a { color: var(--ink); text-decoration: none; font-weight: 500; font-size: 0.95rem; }
+.nav-links a:hover { color: var(--accent); }
+.footer-nav { display: flex; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.15); }
+.footer-nav a { color: #C8D0DB; text-decoration: none; font-size: 0.9rem; }
+.footer-nav a:hover { color: #FFFFFF; }
+
+/* Text Pages */
+.page-content { max-width: 760px; margin: 0 auto; padding: 4rem 1.25rem 3rem; }
+.page-content h1 { font-size: 2.2rem; margin-bottom: 1rem; }
+.page-content h2 { font-size: 1.4rem; margin-top: 2rem; margin-bottom: 0.75rem; }
+.page-content p { font-size: 1.05rem; color: var(--ink-soft); margin-bottom: 1.25rem; }
+
+@media (max-width: 900px) {
+  .nav-links { display: none; } /* Hide top nav on mobile to save space, rely on footer */
+}</style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="wrap topbar-inner">
+        <a href="/" style="display: flex; align-items: center; gap: 0.6rem; text-decoration: none; color: inherit;">
+          <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="1" width="22" height="22" rx="6" fill="#1D4ED8"/><path d="M6 9h12M6 13h12M6 17h8" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <span class="brand">Landed Cost Ledger</span>
+        </a>
+        <nav class="nav-links"><a href="/">Calculator</a><a href="/scenarios/">Scenarios</a><a href="/method">Method</a></nav>
+      </div>
+    </header>
+    <main>
+      <section class="wrap page-content">
+        <span class="overline">Comparison</span>
+        <h1>China: POSTAL vs COURIER</h1>
+        <p class="lede">Comparing shipping modes for <strong>HTS 6109</strong> shipments in the <strong>0-800</strong> value band. While the goods and origin are identical, the entry path, fee structure, and risk profile change drastically between these two modes.</p>
+        
+        <div class="worksheet" style="margin-top: 2rem; grid-template-columns: 1fr 1fr;">
+          <div class="worksheet-left" style="border-right: 1px solid var(--line);">
+            <h3 class="panel-title">POSTAL</h3>
+            <div class="line"><span>Entry Path</span><strong>de_minimis_candidate</strong></div>
+            <div class="line"><span>Fee Profile</span><strong>MAIL</strong></div>
+            <div class="line"><span>Section 301</span><strong>likely</strong></div>
+            <div class="line"><span>Risk Tier</span><strong>HIGH</strong></div>
+            <div class="line"><span>Audit Status</span><strong>SOURCED</strong></div>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--ink-soft);">Apparel under $800 via postal channels may qualify for de minimis, but CBP heavily scrutinizes textile shipments for quota enforcement and forced-labor compliance regardless of value.</p>
+          </div>
+          <div class="worksheet-right">
+            <h3 class="panel-title">COURIER</h3>
+            <div class="line"><span>Entry Path</span><strong>de_minimis_candidate</strong></div>
+            <div class="line"><span>Fee Profile</span><strong>EXPRESS</strong></div>
+            <div class="line"><span>Section 301</span><strong>likely</strong></div>
+            <div class="line"><span>Risk Tier</span><strong>HIGH</strong></div>
+            <div class="line"><span>Audit Status</span><strong>SOURCED</strong></div>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--ink-soft);">Courier textile shipments under $800 face high scrutiny for UFLPA compliance and country-of-origin marking; de minimis eligibility is not guaranteed for restricted materials.</p>
+          </div>
+        </div>
+
+        <div style="margin-top: 3rem; text-align: center;">
+          <a href="/" style="display: inline-block; background: var(--accent); color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600;">Calculate Exact Costs</a>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"><div class="wrap"><p class="footer-small">© 2026 Landed Cost Ledger</p></div></footer>
+  </body>
+</html>

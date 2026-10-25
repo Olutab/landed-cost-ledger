@@ -5,10 +5,11 @@ import Method from './pages/Method';
 import FAQ from './pages/FAQ';
 import Privacy from './pages/Privacy';
 import Contact from './pages/Contact';
+import Research from './pages/Research';
 
 function App() {
   return (
-    <Routes>
+    <Routes><Route path="/research" element={<Research />} />
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/method" element={<Method />} />

@@ -224,21 +224,23 @@ writeFileSync(join(__dirname, '../public/robots.txt'), robotsTxt);
 
 // 2. Generate sitemap.xml
 const corePages = ['', 'about', 'method', 'faq', 'privacy', 'contact', 'credits', 'scenarios'];
-let sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
+let compSlugs = [];
+try { compSlugs = JSON.parse(readFileSync(join(__dirname, '../public/comparisons-slugs.json'), 'utf8')); } catch(e) {}
 
+let sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
 corePages.forEach(page => {
     const loc = page === '' ? SITE_URL : `${SITE_URL}/${page}`;
     sitemapXml += `  <url><loc>${loc}</loc></url>\n`;
 });
-
 matrixData.forEach(row => {
     if (row.auditing_status !== 'UNVERIFIED-DRAFT') {
         sitemapXml += `  <url><loc>${SITE_URL}/scenarios/${row.slug}/</loc></url>\n`;
     }
 });
-
-sitemapXml += `</urlset>`;
-writeFileSync(join(__dirname, '../public/sitemap.xml'), sitemapXml);
+compSlugs.forEach(slug => {
+    sitemapXml += `  <url><loc>${SITE_URL}/comparisons/${slug}/</loc></url>\n`;
+});
+sitemapXml += `</urlset>`;writeFileSync(join(__dirname, '../public/sitemap.xml'), sitemapXml);
 
 console.log(`\n🗺️  Generated robots.txt and sitemap.xml for ${SITE_URL}`);
 // --- Generate Credits Page ---

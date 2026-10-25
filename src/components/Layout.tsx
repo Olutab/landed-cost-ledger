@@ -19,6 +19,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <span className="brand">Landed Cost Ledger</span>
           </Link>
           <nav className="nav-links">
+            <Link to="/research">Research</Link>
             <Link to="/">Calculator</Link>
             <a href="/scenarios/">Scenarios</a>
             <Link to="/method">Method</Link>

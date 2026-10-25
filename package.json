@@ -3,10 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-    "scripts": {
+      "scripts": {
     "dev": "vite",
     "images": "node scripts/fetch-images.mjs",
-    "prebuild": "node scripts/build-scenarios.mjs",
+    "prebuild": "node scripts/build-scenarios.mjs && node scripts/build-comparisons.mjs",
     "build": "tsc -b && vite build",
     "postbuild": "node scripts/verify-images.mjs",
     "lint": "eslint .",
